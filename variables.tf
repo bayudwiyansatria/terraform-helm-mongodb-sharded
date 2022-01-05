@@ -73,12 +73,6 @@ variable "mongodb_server_count" {
 #---------------------------------------------------------------------------------------------------
 # Authentication
 #---------------------------------------------------------------------------------------------------
-variable "mongodb_username" {
-  sensitive   = false
-  description = "Username"
-  default     = "mongodb"
-}
-
 variable "mongodb_password" {
   sensitive   = true
   description = "MongoDB Password"
