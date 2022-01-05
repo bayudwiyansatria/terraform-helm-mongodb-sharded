@@ -1,90 +1,45 @@
-<p align="center">
-<a href="https://bayudwiyansatria.github.io/Development-And-Operations/">
-<img src="https://cdn.bayudwiyansatria.com/assets/logo-full.png" width="100%" />
-</a>
-<br>
-</p>
-<p align="center">
-<a href="#">
-<img src="https://img.shields.io/badge/%20Platforms-Windows%20/%20Linux-blue.svg?style=flat-square" alt="Platforms" />
-</a>
-<a href="https://bayudwiyansatria.github.io/Development-And-Operations/blob/master/LICENSE">
-<img src="https://img.shields.io/badge/%20Licence-MIT-green.svg?style=flat-square" alt="license" />
-</a>
-</p>
-<p align="center">
-<a href="https://github.com/bayudwiyansatria/Development-And-Operations/blob/master/CODE_OF_CONDUCT.md">
-<img src="https://img.shields.io/badge/Community-Code%20of%20Conduct-orange.svg?style=flat-squre" alt="Code of Conduct" />
-</a>
-<a href="https://github.com/bayudwiyansatria/Development-And-Operations/blob/master/SUPPORT.md">
-<img src="https://img.shields.io/badge/Community-Support-red.svg?style=flat-square" alt="Support" />
-</a>
-<a href="https://github.com/bayudwiyansatria/Development-And-Operations/blob/master/CONTRIBUTING.md">
-<img src="https://img.shields.io/badge/%20Community-Contribution-yellow.svg?style=flat-square" alt="Contribution" />
-</a>
-</p>
-<hr>
+# Terraform Helm MongoDB Sharded
 
-# Development and Operation
+![Platforms](https://img.shields.io/badge/%20Platforms-Windows%20/%20Linux-blue.svg?style=flat-square")
+[![License](https://img.shields.io/badge/%20Licence-MIT-green.svg?style=flat-square)](LICENSE.md)
+[![Code Of Conduct](https://img.shields.io/badge/Community-Code%20of%20Conduct-orange.svg?style=flat-squre)](CODE_OF_CONDUCT.md)
+[![Support](https://img.shields.io/badge/Community-Support-red.svg?style=flat-square)](SUPPORT.md)
+[![Contributing](https://img.shields.io/badge/%20Community-Contribution-yellow.svg?style=flat-square)](CONTRIBUTING.md)
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+[![Code Quality](https://github.com/bayudwiyansatria/terraform-helm-mongodb-sharded/actions/workflows/code-quality.yml/badge.svg)](https://github.com/bayudwiyansatria/terraform-helm-mongodb-sharded/actions/workflows/code-quality.yml)
 
-![Github Actions](https://github.com/bayudwiyansatria/Development-And-Operations/workflows/Github%20Action/badge.svg)
+Terraform Module MongoDB High Availability provisioner using terraform. Provisioning A High Availability MongoDB
+using Helm Charts. Charts using [mongodb-sharded](https://github.com/bitnami/charts/tree/master/bitnami/mongodb-sharded)
+under Bitnami Charts.
 
-Global Template Repository for Development and Operations Of Your Projects.
+## Requirements
 
-| Key|Values|
-| ------| ----- |
-| Author| Bayu Dwiyan Satria |
-| Email | bayudwiyansatria@gmail.com |
-| Phone | +62-823-9602-9583 |
-| Website | [https://bayudwiyansatria.com](https://bayudwiyansatria.com) |
+| Name | Version |
+| ---- | ------- |
+| [Terraform](https://www.terraform.io/downloads.html) |  > = 1.0.11 |
 
-## Table of Contents
+- [Helm](https://helm.sh/) Installed
+- [Kubernetes](https://kubernetes.io/) Cluster
 
-* [Dependencies](#dependencies)
-* [Prerequisites](#prerequisites)
-* [Installation](#installation)
-* [Development](#development)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
+Note:
+
+- See also kubernetes [installation](https://github.com/bayudwiyansatria/terraform-kubernetes-cloud-bootstrap) using
+  terraform.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+There are instructions under `demo` directory will get you a copy of the project up and running on your local machine
+for development and testing purposes.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```shell
-apt-get -y install git
-```
-
-Or
+### Usage
 
 ```shell
-yum -y install git
+module "postgresql" {
+  source           = "bayudwiyansatria/mongodb-sharded/helm"
+  mongodb_password = "your-secret-password"
+}
 ```
-
-### Installation
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be clone this repository.
-
-```shell
-git clone git@github.com:bayudwiyansatria/Development-And-Operations.git
-```
-
-## Development
-
--*Release 1.0* : **2019, Nov**.
-
-## Usage
-
-Reference and programming instructional materials.
 
 ## Contributing
 
@@ -102,20 +57,20 @@ Looking to contribute to our code but need some help? There's a few ways to get 
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/bayudwiyansatria/Development-And-Operations/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see
+the [tags on this repository](https://github.com/bayudwiyansatria/Development-And-Operations/tags).
 
 ## Authors
 
-* **[Bayu Dwiyan Satria](https://github.com/bayudwiyansatria)** - *Initial work*
+- [Bayu Dwiyan Satria](https://github.com/bayudwiyansatria)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-<p> Copyright &copy; 2017 - 2019 Public Use. All Rights Reserved.
+<p> Copyright &copy; 2021. All Rights Reserved.
 
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
 * Inspiration
-* etc
